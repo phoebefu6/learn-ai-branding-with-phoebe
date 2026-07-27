@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Builder session 7 · Messaging architecture - learn AI + branding with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-branding-with-phoebe</a> / Builder session 7 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Branding with Phoebe · Builder track · Session 7 of 10</div>
+    <h1>Messaging architecture: <span class="accent">one true thing, said the same way everywhere</span></h1>
+    <p class="sub">You have Cadence's positioning, personality, name, voice, visual direction, and a brand GPT that holds it all. Tonight you turn that into the thing every team can actually use day to day: a message house. One master narrative on top, a few pillars holding it up, real proof underneath - so sales, support, and marketing all say the same true thing in Cadence's words. You will draft it with the brand GPT, then verify every proof point yourself.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Builder track</span>
+      <span class="chip audience">Practitioners: brand · product marketing · comms</span>
+      <span class="chip audience">ChatGPT or Claude</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · The message house</span>
+      <span class="a3" style="flex:5">20-42 · Build-along: house + variants</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where messaging fits</h2>
+    </div>
+    <p class="lede">Positioning (b2) is the strategy inside your head; voice (b4) is how the brand sounds. Messaging architecture is the bridge between them - the shared script that turns strategy into words a whole team can reuse without drifting. It is the last piece of the internal system before you take Cadence to the world in b8. No new tools tonight: you are putting the brand GPT you built in b6 to work.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      Cadence's message house - one master narrative, three message pillars, and the proof under each - plus a short boilerplate paragraph and audience-tailored variants (solo user, team lead, exec). All drafted on-system with the brand GPT, all with proof you have verified as real.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE MESSAGE HOUSE ============ -->
+  <section class="section" id="message-house">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the messaging-hierarchy canon</span>
+      <h2>The message house <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A message house is the simplest way to keep a brand's story straight across a growing team. One master narrative sits on top - the single most important thing the brand wants understood. Under it stand two to four message pillars, each a distinct reason to believe. Under those sits the proof: real features, outcomes, and customers. Every claim traces up to the narrative, and every claim rests on proof. That is the whole trick - it lets ten people say one true thing in the brand's words.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cadence's message house: a roof holding the master narrative, three pillars each a reason to believe, and a foundation of real proof - claims trace up to the narrative and rest on proof">
+        <style>
+          .b7xT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b7xI { font: 700 15px Inter, sans-serif; fill: #131A2A; }
+          .b7xX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b7xXi { font: 400 12.5px Inter, sans-serif; fill: #131A2A; }
+          .b7xN { font: 600 14px Inter, sans-serif; fill: #5C1508; }
+        </style>
+        <!-- roof: master narrative -->
+        <polygon points="220,44 660,44 790,140 90,140" fill="#1E3A6E"/>
+        <text class="b7xT" x="440" y="82" text-anchor="middle">Master narrative</text>
+        <text class="b7xX" x="440" y="104" text-anchor="middle">the one thing: be fully present, notes handle themselves</text>
+        <text class="b7xX" x="440" y="122" text-anchor="middle">ROOF · what everyone must understand</text>
+        <!-- pillars -->
+        <rect x="95" y="164" width="210" height="128" rx="10" fill="#3E5C97"/>
+        <text class="b7xT" x="200" y="200" text-anchor="middle">Present in the room</text>
+        <text class="b7xX" x="200" y="224" text-anchor="middle">you talk, it listens,</text>
+        <text class="b7xX" x="200" y="242" text-anchor="middle">no split attention</text>
+        <text class="b7xX" x="200" y="272" text-anchor="middle">PILLAR 1</text>
+        <rect x="335" y="164" width="210" height="128" rx="10" fill="#3E5C97"/>
+        <text class="b7xT" x="440" y="200" text-anchor="middle">Ready when it ends</text>
+        <text class="b7xX" x="440" y="224" text-anchor="middle">notes + decisions</text>
+        <text class="b7xX" x="440" y="242" text-anchor="middle">drafted instantly</text>
+        <text class="b7xX" x="440" y="272" text-anchor="middle">PILLAR 2</text>
+        <rect x="575" y="164" width="210" height="128" rx="10" fill="#3E5C97"/>
+        <text class="b7xT" x="680" y="200" text-anchor="middle">Yours by default</text>
+        <text class="b7xX" x="680" y="224" text-anchor="middle">private, quietly</text>
+        <text class="b7xX" x="680" y="242" text-anchor="middle">on your side</text>
+        <text class="b7xX" x="680" y="272" text-anchor="middle">PILLAR 3</text>
+        <!-- foundation: proof -->
+        <rect x="95" y="308" width="690" height="52" rx="10" fill="#A9BCE0"/>
+        <text class="b7xI" x="440" y="332" text-anchor="middle">Proof (the foundation)</text>
+        <text class="b7xXi" x="440" y="350" text-anchor="middle">real features · measured outcomes · named customers - every pillar must rest on this</text>
+        <!-- warm note -->
+        <rect x="95" y="378" width="14" height="14" rx="3" fill="#F0523F"/>
+        <text class="b7xN" x="119" y="390">Proof points must be real - the brand GPT drafts the house; you verify each claim.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - Cadence's message house: one narrative, three pillars, real proof underneath</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why a house, and not just a list<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A flat list of talking points drifts fast - everyone grabs a different favourite and the story splinters. A house has structure, and structure is what keeps a growing team aligned:</p>
+        <ul>
+          <li><strong>The roof is the one thing.</strong> If a customer remembers a single sentence, this is it. For Cadence: you can be fully present, because the notes take care of themselves.</li>
+          <li><strong>Pillars are distinct reasons to believe.</strong> Two to four, no overlap. Each is a different angle on the narrative, not a synonym for it.</li>
+          <li><strong>Proof is the load-bearing floor.</strong> A pillar with no real proof is a wish, not a message. If you cannot point to a feature, an outcome, or a customer, it does not go in the house.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The trace test</strong>
+          Every claim your team makes should trace up to the narrative and down to a proof point. If it floats free of both, it does not belong in the house - and it does not belong in the deck either.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Two to four pillars - why the number matters<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>One pillar is just the narrative repeated. Five or more and no one can hold them in their head, so the story fragments in exactly the way the house is meant to prevent. Two to four is the sweet spot: enough to be interesting, few enough to stay memorable. For Cadence, three (presence, readiness, privacy) covers the promise without diluting it. Pick pillars that are genuinely different from each other - if two could swap proof points, collapse them into one.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: BUILDING IT WITH AI ============ -->
+  <section class="section" id="build-on-system">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers Udemy on-brand generation + the messaging canon</span>
+      <h2>Building it with AI, on-system <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">This is where the brand GPT earns its keep. Because it already holds Cadence's positioning, personality, and voice, it drafts a house that sounds like Cadence from the first pass - not the category average. Your job shifts from writing to steering and verifying: shape the pillars, and check that every proof point is true.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Draft with the brand GPT, then tailor per audience<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two moves, in order:</p>
+        <ul>
+          <li><strong>Draft the core once.</strong> Ask the brand GPT for the master narrative and pillars. Because it is on-system, the words already carry the voice - calm, capable, quietly on your side.</li>
+          <li><strong>Tailor without changing the core.</strong> The same house, spoken to different people. A solo user hears "be present, notes handle themselves." A team lead hears "your team's decisions never get lost." An exec hears "meeting time turns into shipped decisions." Same narrative, same pillars, same proof - different emphasis and language. You never rewrite the house per audience; you re-express it.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Rail: proof points must be real</strong>
+          The brand GPT will happily invent a plausible statistic or a customer quote. It cannot know what is true. Every proof point comes back to you: confirm the feature ships, the number is measured, the customer is real and cleared to name. On-brand and on-system is not the same as true - only you own true.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What goes in the house - the layers<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <thead><tr><th>Layer</th><th>What goes in it (Cadence example)</th></tr></thead>
+          <tbody>
+            <tr><td>Master narrative</td><td>The one thing: be fully present in every conversation, because the notes and decisions take care of themselves</td></tr>
+            <tr><td>Pillars (2-4)</td><td>Present in the room · Ready the moment it ends · Yours and private by default</td></tr>
+            <tr><td>Proof under each pillar</td><td>A real feature, a measured outcome, or a named customer - verified, never invented</td></tr>
+            <tr><td>Boilerplate</td><td>The standard "about Cadence" paragraph, straight from the narrative + pillars</td></tr>
+            <tr><td>Elevator pitches</td><td>One-liners per audience - solo user, team lead, exec - all tracing to the same house</td></tr>
+          </tbody>
+        </table>
+        <p>The top three rows are the house itself. The bottom two are what you pour out of it - the reusable pieces every team grabs. Build the house once; the boilerplate and pitches fall out of it.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: CONSISTENCY ACROSS THE ORG ============ -->
+  <section class="section" id="consistency">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the reference every team shares</span>
+      <h2>Consistency across the org <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">A message house is only worth building if people use it. Its real job is to be the single reference - the one place sales, support, and marketing all point to - so the brand says one true thing whether it is a sales deck, a help article, or a launch post.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>One house, every team<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Without a shared house, each team quietly writes its own story and the brand blurs. With one, everyone starts from the same narrative and pillars and adapts to their own moment:</p>
+        <ul>
+          <li><strong>Sales</strong> pulls the exec pitch and the pillar that fits the deal.</li>
+          <li><strong>Support</strong> reaches for the calm, on-your-side voice and the presence pillar.</li>
+          <li><strong>Marketing</strong> turns the narrative into campaigns in b8 - without inventing a new story.</li>
+        </ul>
+        <p>The house is the guardrail. It does not make everyone say the identical sentence; it makes sure every sentence is true to the same brand.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Feed the house to the brand GPT<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The last step closes the loop: paste the finished, verified house back into the brand GPT's instructions (the one you built in b6). Now the GPT does not just know Cadence's voice - it knows Cadence's story, structured. Ask it for a sales one-pager, a support macro, or a launch line, and it draws from the same house every time. That is how a two-person team and a two-hundred-person team stay on-message with the same tool: the reference lives inside the assistant everyone already uses.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Build Cadence's message house <span class="tag demo">★ 13 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Draft the whole house with the brand GPT - master narrative, three pillars, and proof under each - then do the one thing AI cannot: verify the proof is real.</p>
+
+    <div class="steps">
+      <div class="step"><p>Open the Cadence brand GPT from b6 (the one holding positioning, personality, and voice). If you are between chats, paste your one-page brand system in first.</p></div>
+      <div class="step"><p>Ask for the master narrative - the single most important thing Cadence wants understood. Push for one sentence, in Cadence's voice.</p></div>
+      <div class="step"><p>Ask for three message pillars under it, each a distinct reason to believe, plus two or three candidate proof points per pillar.</p></div>
+      <div class="step"><p><strong>Verify.</strong> Go through every proof point and mark it real, needs-a-source, or invented. Delete or fix anything you cannot stand behind. This is the part that is yours, not the model's.</p></div>
+      <div class="step"><p>Tighten the pillars so no two overlap. If two share proof, collapse them. Save the verified house - you will feed it back to the brand GPT and reuse it in b8.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The message-house prompt (paste to your Cadence brand GPT)</span>Using everything you know about Cadence (positioning, personality, voice), build a message house.
+
+1) Master narrative: the ONE thing a person should understand about Cadence, in one
+   sentence, in our voice.
+2) Message pillars: 3 distinct reasons to believe, no overlap. Each in a short phrase.
+3) Proof: under each pillar, list 2-3 candidate proof points (a real feature, a measurable
+   outcome, or a customer type). Mark any you are NOT certain is true as [VERIFY].
+
+Stay on-voice: calm, capable, quietly on our side. Never say "revolutionary", "seamless",
+"game-changer". Do not invent statistics or customer names.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The pillar that could not stand up.</strong> A team let AI draft a house and shipped it whole. One pillar leaned on "trusted by thousands of teams" - a number no one had checked. A journalist asked for the source and there wasn't one. The fix was free and boring: mark every proof point [VERIFY] before it leaves the room. On-brand words are cheap; a claim you can defend is the whole point.</p>
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Audience variants + a boilerplate <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">From one verified house, pour out the reusable pieces: three elevator pitches tuned to different people, and the standard boilerplate paragraph - all tracing to the same narrative, none of them a new story.</p>
+
+    <div class="steps">
+      <div class="step"><p>Give the brand GPT your verified house and ask for one-line pitches for three audiences: a solo user, a team lead, and an exec.</p></div>
+      <div class="step"><p>Check the core held. Each pitch should be the same narrative and pillars in different words - if one invents a new promise, it drifted; send it back.</p></div>
+      <div class="step"><p>Ask for a boilerplate paragraph - the "about Cadence" text for a footer, a press note, or an app-store blurb - built straight from the narrative and pillars.</p></div>
+      <div class="step"><p>Edit for voice and truth, then keep all four pieces with the house. This is your ready-to-use messaging kit going into activation.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The variants + boilerplate prompt</span>Here is Cadence's verified message house: [paste narrative + 3 pillars + proof].
+
+Do not change the core. Re-express the SAME narrative and pillars for three audiences:
+- Solo user: personal presence and calm.
+- Team lead: decisions never get lost, the team stays aligned.
+- Exec: meeting time turns into shipped decisions.
+
+Give one elevator pitch per audience (one sentence each). Then write one boilerplate
+paragraph (3-4 sentences) for an "about Cadence" note. Stay on-voice. Use only proof from
+the house - invent nothing.</div>
+
+    <div class="callout tip">
+      <strong>Same house, different door</strong>
+      If you ever find yourself changing the pillars to fit an audience, stop - you are building a second brand. Tailoring is re-emphasis and re-wording, never a new promise. The house stays put; only the way you walk people through it changes.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish Cadence's message house if you did not complete it live - narrative, three pillars, and verified proof under each.</li>
+      <li>Run the [VERIFY] pass properly: for every proof point, write where the proof actually comes from, or delete it.</li>
+      <li>Feed the finished house back into your Cadence brand GPT's instructions, then ask it for a sales one-liner and check it draws from the house.</li>
+      <li>Write the boilerplate paragraph and the three audience pitches. Keep them with the house as your messaging kit.</li>
+      <li>Optional: build a mini house for your own brand or product. Notice which pillar has the weakest proof - that is your next real task.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from the messaging-hierarchy canon and public brand-AI curricula. Certificates and paid tooling stay official. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Messaging hierarchy / message-house canon</span><span class="note">Part 1 · master narrative, pillars, proof; the trace test</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Brand Management with Generative AI (Udemy)</span><span class="note">Part 2 · on-brand generation, audience variants at scale</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The Brand Algorithm - train AI in your voice</span><span class="note">Part 2-3 · feeding the verified house to the brand GPT</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Distinctive-assets / consistency canon</span><span class="note">Part 3 · one reference so every team stays on-message</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What is a message house?</p>
+      <button class="qopt" type="button">A · A flat list of every talking point a team might use</button>
+      <button class="qopt" type="button">B · One master narrative, held up by 2-4 message pillars, each resting on real proof</button>
+      <button class="qopt" type="button">C · The visual identity guidelines for a brand</button>
+      <p class="qwhy">The house is structured on purpose: a roof (the one thing), pillars (distinct reasons to believe), and a proof foundation. Every claim traces up to the narrative and down to proof.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · How do you tailor the house for a different audience?</p>
+      <button class="qopt" type="button">A · Write a brand-new narrative and pillars for each audience</button>
+      <button class="qopt" type="button">B · Drop the proof so it reads more simply</button>
+      <button class="qopt" type="button">C · Keep the core - same narrative, pillars, and proof - and re-express it in different words and emphasis</button>
+      <p class="qwhy">Tailoring is re-emphasis, never a new promise. If you change the pillars per audience, you are quietly building a second brand.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · The brand GPT drafts a proof point with a specific customer count. What do you do?</p>
+      <button class="qopt" type="button">A · Verify it is real and cleared before it goes in - the model cannot know what is true</button>
+      <button class="qopt" type="button">B · Trust it, since the GPT is loaded with the brand system</button>
+      <button class="qopt" type="button">C · Make the number bigger so it lands harder</button>
+      <p class="qwhy">On-brand and on-system is not the same as true. Proof points must be real - every one comes back to you to confirm the feature, number, or customer.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Builder session 7 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Message house</b><span>one master narrative + 2-4 pillars + real proof under each; every team's shared script.</span></div>
+      <div class="cheat-item"><b>The roof</b><span>the one thing a person should understand about the brand, in a single sentence.</span></div>
+      <div class="cheat-item"><b>The pillars</b><span>2-4 distinct reasons to believe, no overlap; if two share proof, collapse them.</span></div>
+      <div class="cheat-item"><b>The foundation</b><span>real proof - a feature, an outcome, a customer; a pillar with no proof is a wish.</span></div>
+      <div class="cheat-item"><b>The trace test</b><span>every claim traces up to the narrative and down to a proof point, or it does not belong.</span></div>
+      <div class="cheat-item"><b>Draft on-system</b><span>the brand GPT drafts in Cadence's voice from the first pass - you steer and verify.</span></div>
+      <div class="cheat-item"><b>Tailor, don't rewrite</b><span>same narrative + pillars + proof, re-expressed per audience; never a new promise.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b8 - brand activation: take the finished system and house into the world, on-brand.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Builder session 7 of 10 · learn-ai-branding-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b6-guidelines-consistency.html">← Previous: Guidelines &amp; consistency at scale</a> &nbsp;·&nbsp; <a href="b8-brand-activation.html">Next: Brand activation →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

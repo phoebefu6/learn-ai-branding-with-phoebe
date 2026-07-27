@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Builder session 6 · Guidelines & consistency at scale - learn AI + branding with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+<style>
+  /* ---- brand-live simulator (scoped bl-*) ---- */
+  .bl-shell { display: grid; grid-template-columns: 15.5rem 1fr; gap: 1rem; border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#E9EFFA); padding: 1rem; margin: 1.2rem 0 .4rem; }
+  @media (max-width: 720px) { .bl-shell { grid-template-columns: 1fr; } }
+  .bl-ctitle { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; color: var(--indigo); margin-bottom: .6rem; }
+  .bl-levers { display: flex; flex-direction: column; gap: .5rem; }
+  .bl-lever { display: flex; align-items: center; gap: .6rem; text-align: left; border: 1px solid var(--hairline); background: #fff; border-radius: 12px; padding: .55rem .7rem; cursor: pointer; transition: all .14s ease; font: inherit; color: var(--ink); }
+  .bl-lever:hover { border-color: var(--indigo-soft); }
+  .bl-lever.bl-active { border-color: var(--indigo); background: var(--indigo-50); }
+  .bl-sw { flex: none; width: 2rem; height: 1.15rem; border-radius: 999px; background: var(--faint); position: relative; transition: background .14s ease; }
+  .bl-sw::after { content: ""; position: absolute; top: 2px; left: 2px; width: calc(1.15rem - 4px); height: calc(1.15rem - 4px); border-radius: 50%; background: #fff; transition: transform .14s ease; box-shadow: 0 1px 2px rgba(19,26,42,.3); }
+  .bl-lever.bl-active .bl-sw { background: var(--indigo); }
+  .bl-lever.bl-active .bl-sw::after { transform: translateX(.85rem); }
+  .bl-ltext { display: flex; flex-direction: column; line-height: 1.25; }
+  .bl-ltext b { font-size: .84rem; font-weight: 700; }
+  .bl-ltext span { font-size: .72rem; color: var(--muted); }
+  .bl-modes { display: flex; gap: .4rem; margin-top: .9rem; }
+  .bl-mode { flex: 1; border: 1px solid var(--hairline); background: #fff; border-radius: 999px; padding: .38rem .5rem; font-size: .74rem; font-weight: 700; cursor: pointer; color: var(--muted); transition: all .14s ease; }
+  .bl-mode.bl-on { background: var(--indigo); color: #fff; border-color: var(--indigo); }
+  .bl-stage { min-width: 0; }
+  .bl-meters { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: .8rem; }
+  .bl-meter { flex: 1; min-width: 9rem; border: 1px solid var(--hairline); border-radius: 12px; background: #fff; padding: .6rem .8rem; }
+  .bl-mlabel { display: block; font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--muted); }
+  .bl-mval { font-size: 1.7rem; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1.2; color: var(--ink); }
+  .bl-mval.bl-good { color: var(--indigo); }
+  .bl-bar { height: 7px; border-radius: 999px; background: var(--hairline); margin-top: .35rem; overflow: hidden; }
+  .bl-bar i { display: block; height: 100%; background: linear-gradient(90deg,var(--indigo-mid),var(--indigo)); transition: width .3s ease; }
+  .bl-draftlabel, .bl-scorehead { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--indigo); margin-bottom: .4rem; }
+  .bl-scorehead { text-transform: none; font-size: .95rem; letter-spacing: 0; color: var(--ink); }
+  .bl-draft { border: 1px solid var(--hairline); border-left: 3px solid var(--indigo); border-radius: 10px; background: #fff; padding: .8rem 1rem; }
+  .bl-line { font-size: .9rem; margin: 0 0 .55rem; line-height: 1.6; }
+  .bl-line:last-child { margin-bottom: 0; }
+  .bl-line.bl-warn { color: var(--amber-ink); background: var(--amber-50); border-radius: 8px; padding: .5rem .65rem; }
+  .bl-tag { display: inline-block; font-size: .64rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--indigo); background: var(--indigo-50); border-radius: 5px; padding: .1rem .4rem; margin-right: .3rem; vertical-align: middle; }
+  .bl-table { width: 100%; border-collapse: collapse; margin: .3rem 0 .5rem; font-size: .86rem; }
+  .bl-table th { text-align: left; text-transform: uppercase; font-size: .66rem; letter-spacing: .07em; color: var(--muted); padding: .35rem .5rem; border-bottom: 1px solid var(--hairline); }
+  .bl-table td { padding: .4rem .5rem; border-bottom: .5px solid var(--hairline); }
+  .bl-rmark { font-weight: 800; text-align: center; }
+  .bl-r-ok .bl-rmark { color: var(--indigo); }
+  .bl-r-no .bl-rmark { color: var(--faint); }
+  .bl-note, .bl-rail { font-size: .78rem; color: var(--muted); line-height: 1.55; }
+  .bl-rail { margin-top: .8rem; border-top: 1px dashed var(--hairline); padding-top: .6rem; font-style: italic; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-branding-with-phoebe</a> / Builder session 6 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Branding with Phoebe · Builder track · Session 6 of 10</div>
+    <h1>Guidelines &amp; consistency: <span class="accent">the system AI must obey</span></h1>
+    <p class="sub">Everything you built in b2-b5 - positioning, personality, naming, voice, visual direction - becomes worth ten times more the moment it is written down in a form AI can follow. This session turns Cadence's brand into a machine-usable system and a brand GPT, then hands you a live simulator that proves the point: consistency is not luck, it is the system filling in.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Builder track</span>
+      <span class="chip audience">Practitioners: brand · brand ops · content</span>
+      <span class="chip audience">ChatGPT or Claude</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-17 · Guidelines AI can obey</span>
+      <span class="a3" style="flex:5">17-42 · Simulator + brand GPT</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why guidelines are the whole game now</h2>
+    </div>
+    <p class="lede">A brand book used to be a PDF nobody opened. In the AI age it is the single most valuable brand asset you own, because it is the thing that steers every AI-generated word and image off the category average and onto your brand. In 2026, documented guidelines - especially verbal, with sample copy and a "never say" list - are a requirement, not a nicety. Tonight you make Cadence's, and turn it into a brand GPT that enforces itself.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      Cadence's machine-usable brand guidelines (the parts AI actually needs), a working Cadence brand GPT that generates on-system, hands-on time with the consistency simulator, and the habit of treating the system - not the model - as the source of brand consistency.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: GUIDELINES AI CAN OBEY ============ -->
+  <section class="section" id="guidelines">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers Establishing AI Brand Guidelines + brand-voice training</span>
+      <h2>Guidelines an AI can actually obey <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Human guidelines say "be confident and warm". An AI cannot use that. Machine-usable guidelines give rules, examples, and hard boundaries: sample copy for each context, explicit "never say" lists, and decision rules. Same brand, written so a model produces it on demand.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The brand system feeds a brand GPT, which produces consistent on-brand output at scale; a human audits">
+        <style>
+          .b6pT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .b6pI { font: 700 14px Inter, sans-serif; fill: #131A2A; }
+          .b6pX { font: 400 11.5px Inter, sans-serif; fill: #DDE6F5; }
+          .b6pN { font: 600 14px Inter, sans-serif; fill: #5C1508; }
+          .b6pArr { stroke: #C4CDDE; stroke-width: 2.5; fill: none; marker-end: url(#b6pAh); }
+        </style>
+        <defs>
+          <marker id="b6pAh" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6" fill="none" stroke="#C4CDDE" stroke-width="1.5"/>
+          </marker>
+        </defs>
+        <rect x="20" y="66" width="200" height="66" rx="12" fill="#0F1E3D"/>
+        <text class="b6pT" x="42" y="94">Brand system</text>
+        <text class="b6pX" x="42" y="114">positioning, voice,</text>
+        <text class="b6pX" x="42" y="128">never-say, visuals</text>
+        <rect x="330" y="66" width="200" height="66" rx="12" fill="#1E3A6E"/>
+        <text class="b6pT" x="352" y="94">Brand GPT</text>
+        <text class="b6pX" x="352" y="114">system loaded as</text>
+        <text class="b6pX" x="352" y="128">custom instructions</text>
+        <rect x="640" y="66" width="216" height="66" rx="12" fill="#3E5C97"/>
+        <text class="b6pT" x="662" y="94">On-brand output</text>
+        <text class="b6pX" x="662" y="114">consistent at scale,</text>
+        <text class="b6pX" x="662" y="128">human audits</text>
+        <line class="b6pArr" x1="224" y1="99" x2="326" y2="99"/>
+        <line class="b6pArr" x1="534" y1="99" x2="636" y2="99"/>
+        <rect x="20" y="210" width="14" height="14" rx="3" fill="#F0523F"/>
+        <text class="b6pN" x="44" y="222">Write the system down once; the brand GPT applies it a thousand times without you.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - system to brand GPT to consistent output, with a human audit</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The four things AI needs from your guidelines<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Translate the human brand book into the parts a model can act on:</p>
+        <ul>
+          <li><strong>Positioning + personality in a line each</strong> - what Cadence stands for and how it behaves, so the model has a target.</li>
+          <li><strong>Voice rules with sample copy</strong> - three or four principles, each with a do and a don't example. Examples teach far better than adjectives.</li>
+          <li><strong>The "never say" list</strong> - banned words, claims, and tones. This single list removes most off-brand output.</li>
+          <li><strong>Decision rules</strong> - how to handle length, formality by channel, and edge cases, so the model does not improvise your brand.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The "never say" list that saved a voice.</strong> One team's AI content kept drifting into hype - "revolutionary", "seamless", "unlock". Adding a six-word never-say list to their brand GPT did more for consistency than any amount of "be authentic" coaching. Boundaries, not adjectives, are what a model can actually follow.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Living guidelines, not a frozen PDF<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Machine-usable guidelines are a living document: version them, add examples as edge cases appear, and keep the brand GPT in sync. A guideline the team cannot find or the GPT does not have is a guideline that does not exist. Store the source of truth somewhere both humans and your tools can reach.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ INTERACTIVE: THE SIMULATOR ============ -->
+  <section class="section" id="simulator">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the brand-consistency simulator</span>
+      <h2>Drive it yourself: watch consistency get built <span class="tag demo">★ 8 min · everyone plays</span></h2>
+    </div>
+    <p class="lede">Here is the whole lesson in one control panel. The AI is generating Cadence brand assets. Every foundation you turn on - positioning, voice + never-say, personality, visual system, guidelines - steers it further off the average. Watch on-brand consistency climb and flip to the scorecard to see how many asset types come out on-brand. Notice what never moves it: a bigger model.</p>
+
+    <div id="brand-live"></div>
+
+    <div class="callout tip">
+      <strong>What the simulator is teaching</strong>
+      Start with everything off: generic "innovative solutions" sludge that could be anyone. Lock positioning and it gets on-message. Add voice + never-say and the hype words die. Add personality, visual system, and guidelines and every asset type turns on-brand. The system built that consistency - not the model.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Assemble Cadence's machine-usable guidelines <span class="tag demo">★ 12 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Pull everything from b2-b5 into the one-page system a model can obey. This is the artifact the brand GPT will run on.</p>
+
+    <div class="steps">
+      <div class="step"><p>Gather your Cadence outputs so far: positioning (b2), personality + archetype (b3), naming + voice (b4), visual direction (b5).</p></div>
+      <div class="step"><p>Ask the AI to compress them into a machine-usable brief: positioning line, personality line, 4 voice rules each with a do/don't example, a never-say list, and 3 decision rules.</p></div>
+      <div class="step"><p>Edit hard - especially the never-say list and the examples. These carry the most weight in steering the model.</p></div>
+      <div class="step"><p>This one page is your source of truth. It powers the brand GPT in Demo 2 and every content session after.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The guidelines-compression prompt</span>Here are Cadence's brand foundations: [paste positioning, personality, voice notes,
+naming, visual direction from b2-b5].
+
+Compress into a one-page, machine-usable brand brief:
+1) Positioning in one line; 2) personality in one line; 3) four voice rules, each with a
+short DO example and a DON'T example; 4) a "never say" list of banned words/claims/tones;
+5) three decision rules (length, formality by channel, how to handle edge cases).
+Keep it concrete - examples over adjectives. Do not add anything not in my inputs.</div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Build the Cadence brand GPT <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">Load the system into a reusable assistant so anyone on the team generates on-brand without you in the room. This is how a small brand acts consistent at scale.</p>
+
+    <div class="steps">
+      <div class="step"><p>Open a custom GPT / project / custom-instructions space in your AI tool. Paste the one-page machine-usable brief from Demo 1 as its standing instructions.</p></div>
+      <div class="step"><p>Add the operating rule: "Generate strictly to this brand system. Refuse or flag anything that violates the never-say list. If information is missing, ask rather than invent."</p></div>
+      <div class="step"><p>Test it on three asset types - a tagline, a social post, and a sales-email opener. Check each against the system: on-message, on-voice, no banned words.</p></div>
+      <div class="step"><p>Compare to a plain chatbot with no system given the same ask. The gap you see is exactly the consistency meter in the simulator, made real.</p></div>
+      <div class="step"><p>Save the brand GPT and share it. You just turned a documented system into an enforcement engine - the b8 activation session runs on this.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The brand GPT standing instructions (skeleton)</span>You are the Cadence brand assistant. Generate strictly to this system:
+[paste the one-page machine-usable brief - positioning, personality, voice rules with
+examples, never-say list, decision rules].
+
+Rules: match the voice examples, obey the never-say list without exception, and keep every
+claim to what the brief supports. If something needed is missing, ask - do not invent.
+Flag anything a user requests that would break the brand system.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>How a five-person team sounds like one voice.</strong> A startup could not afford a copy chief on every asset, so they built a brand GPT from their system. New hires, contractors, and the founder all ran drafts through it first. The brand held together not because everyone had taste, but because the system did - and the model obeyed it.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish Cadence's one-page machine-usable brief and build the brand GPT if you did not live.</li>
+      <li>Play the simulator again and predict the consistency score before each toggle - predicting it means you understand what drives it.</li>
+      <li>Run your real brand (or one you admire) through the "compress to machine-usable" prompt. Note the biggest gap - usually a missing never-say list.</li>
+      <li>Test your brand GPT on one asset type you actually ship. Keep what is on-brand; log what it got wrong to refine the guidelines.</li>
+      <li>Optional: version your guidelines doc and decide where the single source of truth will live.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public brand-AI guidance. Certificates and paid tooling stay official. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Establishing AI Brand Guidelines 2026 (Cloud Campaign)</span><span class="note">Parts 1-2 · machine-usable guidelines + consistency at scale</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Train AI in your brand voice (The Brand Algorithm)</span><span class="note">Part 1 + demos · sample copy, never-say, brand GPT</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Brand Management with Generative AI</span><span class="note">Demo 2 · on-brand generation at scale</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · In the simulator, what makes every asset type come out on-brand?</p>
+      <button class="qopt" type="button">A · A bigger, newer model</button>
+      <button class="qopt" type="button">B · Longer prompts</button>
+      <button class="qopt" type="button">C · Filling in the brand system - positioning, voice + never-say, personality, visual, guidelines</button>
+      <p class="qwhy">Consistency is the system filling in, not the model. Each foundation steers the AI further off the average and onto the brand.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · What do machine-usable guidelines add that a human brand book often lacks?</p>
+      <button class="qopt" type="button">A · Prettier layout</button>
+      <button class="qopt" type="button">B · Sample copy examples, an explicit never-say list, and decision rules a model can follow</button>
+      <button class="qopt" type="button">C · More adjectives like "bold" and "authentic"</button>
+      <p class="qwhy">"Be confident and warm" is useless to a model. Examples and boundaries are what it can actually obey - the never-say list does the heaviest lifting.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · What is a brand GPT?</p>
+      <button class="qopt" type="button">A · An assistant loaded with your brand system as standing instructions, so output stays on-brand</button>
+      <button class="qopt" type="button">B · A new large language model you train from scratch</button>
+      <button class="qopt" type="button">C · A logo generator</button>
+      <p class="qwhy">A brand GPT turns your documented system into an enforcement engine - the same system, applied a thousand times without you in the room. A human still audits.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Builder session 6 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Guidelines are the game</b><span>in the AI age the brand book is your most valuable asset - it steers AI off the average onto your brand.</span></div>
+      <div class="cheat-item"><b>Machine-usable means</b><span>positioning + personality lines, voice rules WITH examples, a never-say list, decision rules.</span></div>
+      <div class="cheat-item"><b>Examples over adjectives</b><span>"be warm" is useless to a model; a do/don't example is followable. Show, do not describe.</span></div>
+      <div class="cheat-item"><b>The never-say list</b><span>banned words/claims/tones removes most off-brand output - the highest-leverage line in the doc.</span></div>
+      <div class="cheat-item"><b>Consistency = system</b><span>the simulator proves it: consistency climbs as the system fills in, not as the model gets bigger.</span></div>
+      <div class="cheat-item"><b>Brand GPT</b><span>load the system as standing instructions = an enforcement engine that applies it at scale.</span></div>
+      <div class="cheat-item"><b>Living, not frozen</b><span>version the guidelines, add examples for edge cases, keep the brand GPT in sync.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b7 - messaging architecture: the hierarchy, boilerplate, and proof so every team says the same true thing.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Builder session 6 of 10 · learn-ai-branding-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b5-visual-identity-direction.html">← Previous: Visual identity direction</a> &nbsp;·&nbsp; <a href="b7-messaging-architecture.html">Next: Messaging architecture →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/brand-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

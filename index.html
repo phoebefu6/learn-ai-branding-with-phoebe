@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn AI + branding with phoebe - a two-track course for brand builders who embrace AI</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(30,58,110,.14); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#E9EFFA); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+
+  .rail { margin-top: 1.4rem; border: 1px solid var(--hairline); border-left: 4px solid var(--amber); border-radius: var(--radius); background: var(--amber-50); padding: 1rem 1.2rem; font-size: .9rem; }
+  .rail b { color: var(--amber-ink); }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Branding with Phoebe</div>
+    <h1>Two tracks for brand builders who <span class="accent">embrace AI</span></h1>
+    <p class="sub">A leader track that teaches brand and marketing leaders to steer AI without diluting the brand - and a builder track where you build one brand foundation end to end for a sample company, Cadence, using AI at every step: positioning, personality, naming and voice, visual direction, guidelines, and messaging. In a world flooded with AI sameness, a documented brand is your only real moat, and this is how you build one AI can scale without breaking.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="2">2</b><span>tracks</span></div>
+      <div class="stat"><b data-count="16">16</b><span>sessions</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+      <div class="stat"><b data-count="1">1</b><span>brand, built end to end</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The leader track 🤝 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for CBOs, brand &amp; marketing leaders · 6 x 45 min · no code, ever</span></h2>
+      <p class="plede">Thinking mode: why brand matters more in the AI age, where AI helps and where it must never touch the brand soul, how to govern brand at scale, and how to measure it - each session ends with the questions to ask your team and your agencies.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/a1-ai-first-brand.html" style="--diff:#34D399">
+        <span class="cicon">🏛️</span>
+        <span class="cnum">Leader 1 · easy</span>
+        <h3>The AI-first brand</h3>
+        <p>Why brand matters more, not less, in an age of AI sludge - and the map of where AI helps versus the brand soul.</p>
+        <span class="meta"><span class="pill amber">▶ Leaders start here</span></span>
+      </a>
+      <a class="course-card" href="courses/a2-brand-use-case-risk-map.html" style="--diff:#34D399">
+        <span class="cicon">🎯</span>
+        <span class="cnum">Leader 2 · easy</span>
+        <h3>The brand use-case + risk map</h3>
+        <p>Score AI bets across naming, identity, voice, and monitoring - weighed against brand-dilution and IP risk.</p>
+        <span class="meta"><span class="pill light">Prioritization exercise</span></span>
+      </a>
+      <a class="course-card" href="courses/a3-brand-integrity-trust-ip.html" style="--diff:#FBBF24">
+        <span class="cicon">🛡️</span>
+        <span class="cnum">Leader 3 · medium</span>
+        <h3>Brand integrity, trust &amp; IP</h3>
+        <p>Consistency vs homogenization, authenticity, trademark and likeness of AI assets, deepfakes, and disclosure.</p>
+        <span class="meta"><span class="pill light">Brand-safety checklist</span></span>
+      </a>
+      <a class="course-card" href="courses/a4-ai-ready-brand-team.html" style="--diff:#FBBF24">
+        <span class="cicon">👥</span>
+        <span class="cnum">Leader 4 · medium</span>
+        <h3>The AI-ready brand team &amp; ops</h3>
+        <p>New roles, the brand-guardian function, and how to govern a living brand across a team using AI at scale.</p>
+        <span class="meta"><span class="pill light">Skills-map exercise</span></span>
+      </a>
+      <a class="course-card" href="courses/a5-measuring-brand.html" style="--diff:#FB923C">
+        <span class="cicon">📊</span>
+        <span class="cnum">Leader 5 · deciding</span>
+        <h3>Measuring brand</h3>
+        <p>Brand equity, distinctiveness, and perception tracking with AI - and how to dodge the everything-looks-the-same trap.</p>
+        <span class="meta"><span class="pill light">Business-case exercise</span></span>
+      </a>
+      <a class="course-card" href="courses/a6-brand-strategy-roadmap.html" style="--diff:#FB923C">
+        <span class="cicon">🧭</span>
+        <span class="cnum">Leader 6 · deciding</span>
+        <h3>Brand strategy &amp; the roadmap</h3>
+        <p>The agentic and living-identity future, what to sequence when, and the board narrative for brand investment.</p>
+        <span class="meta"><span class="pill light">Roadmap exercise</span></span>
+      </a>
+    </div>
+
+    <div class="paths">
+      <h2>The builder track 🛠️ <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for brand practitioners · 10 x 45 min · ChatGPT / Claude, no code</span></h2>
+      <p class="plede">One growing brand: you build Cadence's whole foundation - positioning, personality, naming and voice, visual direction, guidelines, and messaging - the prequel to the campaign you could run in AI + Marketing. Every session adds a layer, built with AI and kept human where it counts.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/b1-ai-foundations-brand.html" style="--diff:#34D399">
+        <span class="cicon">🤖</span>
+        <span class="cnum">Builder 1 · easy</span>
+        <h3>AI foundations for brand builders</h3>
+        <p>What AI does well and badly for brand work, the tool landscape, and the two rails that keep the brand yours.</p>
+        <span class="meta"><span class="pill amber">▶ Builders start here</span></span>
+      </a>
+      <a class="course-card" href="courses/b2-positioning-strategy.html" style="--diff:#FBBF24">
+        <span class="cicon">🧭</span>
+        <span class="cnum">Builder 2 · medium</span>
+        <h3>Positioning &amp; brand strategy</h3>
+        <p>Category, competitive differentiation, and Cadence's strategy house - purpose, promise, and pillars.</p>
+        <span class="meta"><span class="pill light">Cadence strategy house</span></span>
+      </a>
+      <a class="course-card" href="courses/b3-personality-archetype.html" style="--diff:#FBBF24">
+        <span class="cicon">🎭</span>
+        <span class="cnum">Builder 3 · medium</span>
+        <h3>Brand personality &amp; archetype</h3>
+        <p>Pick Cadence's archetype and personality traits, and map the tone spectrum that makes it feel like someone.</p>
+        <span class="meta"><span class="pill light">Cadence personality</span></span>
+      </a>
+      <a class="course-card" href="courses/b4-naming-verbal-identity.html" style="--diff:#FBBF24">
+        <span class="cicon">🔤</span>
+        <span class="cnum">Builder 4 · medium</span>
+        <h3>Naming &amp; verbal identity</h3>
+        <p>Naming and taglines, voice principles, and the "what we would never say" rules that keep AI on-brand.</p>
+        <span class="meta"><span class="pill light">Cadence voice guide</span></span>
+      </a>
+      <a class="course-card" href="courses/b5-visual-identity-direction.html" style="--diff:#FB923C">
+        <span class="cicon">🎨</span>
+        <span class="cnum">Builder 5 · hands-on</span>
+        <h3>Visual identity direction</h3>
+        <p>Logo, colour, and type direction plus moodboards with AI - the direction, with the craft and rights left to humans.</p>
+        <span class="meta"><span class="pill light">Cadence moodboard</span></span>
+      </a>
+      <a class="course-card" href="courses/b6-guidelines-consistency.html" style="--diff:#FBBF24">
+        <span class="cicon">📐</span>
+        <span class="cnum">Builder 6 · medium</span>
+        <h3>Guidelines &amp; consistency at scale</h3>
+        <p>Build the brand book and a brand GPT - with a live simulator that shows consistency climb as the system fills in.</p>
+        <span class="meta"><span class="pill light">★ interactive: brand-live</span></span>
+      </a>
+      <a class="course-card" href="courses/b7-messaging-architecture.html" style="--diff:#FBBF24">
+        <span class="cicon">🗂️</span>
+        <span class="cnum">Builder 7 · medium</span>
+        <h3>Messaging architecture</h3>
+        <p>Message hierarchy, boilerplate, and proof points - so every team says the same true thing in the brand's words.</p>
+        <span class="meta"><span class="pill light">Cadence message house</span></span>
+      </a>
+      <a class="course-card" href="courses/b8-brand-activation.html" style="--diff:#34D399">
+        <span class="cicon">🚀</span>
+        <span class="cnum">Builder 8 · easy</span>
+        <h3>Brand activation</h3>
+        <p>Take the finished brand on-brand into content and a launch moment - the handoff to the AI + Marketing campaign.</p>
+        <span class="meta"><span class="pill light">Cadence launch kit</span></span>
+      </a>
+      <a class="course-card" href="courses/b9-brand-monitoring-health.html" style="--diff:#FB923C">
+        <span class="cicon">📡</span>
+        <span class="cnum">Builder 9 · hands-on</span>
+        <h3>Brand monitoring &amp; health</h3>
+        <p>Social listening, perception tracking, and consistency audits with AI - the human still owns the read.</p>
+        <span class="meta"><span class="pill light">Cadence health check</span></span>
+      </a>
+      <a class="course-card" href="courses/b10-governance-ip-production.html" style="--diff:#F87171">
+        <span class="cicon">🔒</span>
+        <span class="cnum">Builder 10 · hardest</span>
+        <h3>Governance, IP &amp; production</h3>
+        <p>Brand-safety, trademark and likeness, disclosure, prompt injection, and the rollout checklist before you ship.</p>
+        <span class="meta"><span class="pill light">Rollout checklist</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>easy - everyone</span>
+      <span><i style="background:#FBBF24"></i>medium</span>
+      <span><i style="background:#FB923C"></i>hands-on / deciding</span>
+      <span><i style="background:#F87171"></i>hardest</span>
+    </div>
+
+    <div class="rail">
+      <b>The one rule this whole course runs on:</b> AI assists, humans own the brand soul and the claim. AI floods every category with sameness - a documented brand system (especially your voice and your "never say") is the antidote, and IP, likeness, and disclosure always get a human check.
+    </div>
+
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Two doors, one course. Leaders never touch a tool; builders never sit through brand theory they have not first built.</p>
+      <div class="path"><b>🤝 Leader (no code, ever)</b>
+        <a class="pstep" href="courses/a1-ai-first-brand.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a2-brand-use-case-risk-map.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a3-brand-integrity-trust-ip.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a4-ai-ready-brand-team.html">a4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a5-measuring-brand.html">a5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a6-brand-strategy-roadmap.html">a6</a>
+      </div>
+      <div class="path"><b>🛠️ Builder (build Cadence's brand)</b>
+        <a class="pstep" href="courses/b1-ai-foundations-brand.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-positioning-strategy.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b3-personality-archetype.html">b3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-naming-verbal-identity.html">b4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-visual-identity-direction.html">b5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b6-guidelines-consistency.html">b6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b7-messaging-architecture.html">b7</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-brand-activation.html">b8</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b9-brand-monitoring-health.html">b9</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b10-governance-ip-production.html">b10</a>
+      </div>
+      <div class="path"><b>🌱 Curious follower (a taste)</b>
+        <a class="pstep" href="courses/a1-ai-first-brand.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a2-brand-use-case-risk-map.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-ai-foundations-brand.html">b1</a>
+      </div>
+      <div class="path"><b>🚀 Full journey (lead AND build)</b>
+        <a class="pstep" href="courses/a1-ai-first-brand.html">a1-a6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-ai-foundations-brand.html">b1-b10</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">Both tracks at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-ai-branding-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> · sources: Brand Management with GenAI · Clay · Cloud Campaign · brand-strategy canon + IP/FTC guidance</span>
+  </footer>
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "AI +\nBranding",
+  centerColor: "#0F1E3D",
+  sessions: [
+    { label: "AI-first\nbrand", href: "courses/a1-ai-first-brand.html", color: "#34D399",
+      concepts: [
+        { label: "Brand as moat", href: "courses/a1-ai-first-brand.html" },
+        { label: "Where AI helps", href: "courses/a1-ai-first-brand.html" } ] },
+    { label: "Use-case +\nrisk map", href: "courses/a2-brand-use-case-risk-map.html", color: "#34D399",
+      concepts: [
+        { label: "Score the bets", href: "courses/a2-brand-use-case-risk-map.html" },
+        { label: "Dilution risk", href: "courses/a2-brand-use-case-risk-map.html" } ] },
+    { label: "Integrity +\nIP", href: "courses/a3-brand-integrity-trust-ip.html", color: "#FBBF24",
+      concepts: [
+        { label: "Consistency", href: "courses/a3-brand-integrity-trust-ip.html" },
+        { label: "Trademark + likeness", href: "courses/a3-brand-integrity-trust-ip.html" },
+        { label: "Disclosure", href: "courses/a3-brand-integrity-trust-ip.html" } ] },
+    { label: "AI-ready\nbrand team", href: "courses/a4-ai-ready-brand-team.html", color: "#FBBF24",
+      concepts: [
+        { label: "Brand guardian", href: "courses/a4-ai-ready-brand-team.html" },
+        { label: "Brand ops", href: "courses/a4-ai-ready-brand-team.html" } ] },
+    { label: "Measuring\nbrand", href: "courses/a5-measuring-brand.html", color: "#FB923C",
+      concepts: [
+        { label: "Equity + distinct", href: "courses/a5-measuring-brand.html" },
+        { label: "Sameness trap", href: "courses/a5-measuring-brand.html" } ] },
+    { label: "Strategy +\nroadmap", href: "courses/a6-brand-strategy-roadmap.html", color: "#FB923C",
+      concepts: [
+        { label: "Living identity", href: "courses/a6-brand-strategy-roadmap.html" },
+        { label: "Board narrative", href: "courses/a6-brand-strategy-roadmap.html" } ] },
+    { label: "AI\nfoundations", href: "courses/b1-ai-foundations-brand.html", color: "#34D399",
+      concepts: [
+        { label: "Can vs can't", href: "courses/b1-ai-foundations-brand.html" },
+        { label: "Tool landscape", href: "courses/b1-ai-foundations-brand.html" },
+        { label: "The two rails", href: "courses/b1-ai-foundations-brand.html" } ] },
+    { label: "Positioning +\nstrategy", href: "courses/b2-positioning-strategy.html", color: "#FBBF24",
+      concepts: [
+        { label: "Category", href: "courses/b2-positioning-strategy.html" },
+        { label: "Strategy house", href: "courses/b2-positioning-strategy.html" } ] },
+    { label: "Personality +\narchetype", href: "courses/b3-personality-archetype.html", color: "#FBBF24",
+      concepts: [
+        { label: "Archetype", href: "courses/b3-personality-archetype.html" },
+        { label: "Tone spectrum", href: "courses/b3-personality-archetype.html" } ] },
+    { label: "Naming +\nvoice", href: "courses/b4-naming-verbal-identity.html", color: "#FBBF24",
+      concepts: [
+        { label: "Naming", href: "courses/b4-naming-verbal-identity.html" },
+        { label: "Voice rules", href: "courses/b4-naming-verbal-identity.html" },
+        { label: "Never say", href: "courses/b4-naming-verbal-identity.html" } ] },
+    { label: "Visual\ndirection", href: "courses/b5-visual-identity-direction.html", color: "#FB923C",
+      concepts: [
+        { label: "Logo/colour/type", href: "courses/b5-visual-identity-direction.html" },
+        { label: "Moodboards", href: "courses/b5-visual-identity-direction.html" } ] },
+    { label: "Guidelines +\nconsistency", href: "courses/b6-guidelines-consistency.html", color: "#FBBF24",
+      concepts: [
+        { label: "Brand book", href: "courses/b6-guidelines-consistency.html" },
+        { label: "Brand GPT", href: "courses/b6-guidelines-consistency.html" },
+        { label: "Consistency sim", href: "courses/b6-guidelines-consistency.html" } ] },
+    { label: "Messaging\narchitecture", href: "courses/b7-messaging-architecture.html", color: "#FBBF24",
+      concepts: [
+        { label: "Hierarchy", href: "courses/b7-messaging-architecture.html" },
+        { label: "Boilerplate", href: "courses/b7-messaging-architecture.html" } ] },
+    { label: "Brand\nactivation", href: "courses/b8-brand-activation.html", color: "#34D399",
+      concepts: [
+        { label: "On-brand content", href: "courses/b8-brand-activation.html" },
+        { label: "Launch kit", href: "courses/b8-brand-activation.html" } ] },
+    { label: "Monitoring +\nhealth", href: "courses/b9-brand-monitoring-health.html", color: "#FB923C",
+      concepts: [
+        { label: "Listening", href: "courses/b9-brand-monitoring-health.html" },
+        { label: "Consistency audit", href: "courses/b9-brand-monitoring-health.html" } ] },
+    { label: "Governance +\nIP", href: "courses/b10-governance-ip-production.html", color: "#F87171",
+      concepts: [
+        { label: "Trademark/likeness", href: "courses/b10-governance-ip-production.html" },
+        { label: "Prompt injection", href: "courses/b10-governance-ip-production.html" },
+        { label: "Rollout checklist", href: "courses/b10-governance-ip-production.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>

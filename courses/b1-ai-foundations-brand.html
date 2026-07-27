@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Builder session 1 · AI foundations for brand builders - learn AI + branding with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-branding-with-phoebe</a> / Builder session 1 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + Branding with Phoebe · Builder track · Session 1 of 10</div>
+    <h1>AI foundations for brand builders: <span class="accent">the antidote to sameness</span></h1>
+    <p class="sub">Before you build a single piece of Cadence's brand, one honest hour: what AI is genuinely great at in brand work, the one thing it does that quietly kills brands - it makes everything average - and the two rails that keep the brand yours. By the end you will know why a documented brand system is not bureaucracy; it is the only thing that lets AI scale your brand instead of dissolving it.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Builder track</span>
+      <span class="chip audience">Practitioners: brand · marketing · founders</span>
+      <span class="chip audience">ChatGPT or Claude · no code</span>
+      <span class="chip time">Start here</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · What AI does for brand</span>
+      <span class="a3" style="flex:5">18-42 · Build-along: sameness vs distinct</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>How this track works</h2>
+    </div>
+    <p class="lede">Ten sessions, all hands-on, all building one thing: the whole brand foundation for <strong>Cadence</strong>, a sample AI note-taker - the prequel to the campaign you could run in the AI + Marketing course. Tonight you learn what the tool is; then b2 sets positioning and strategy, b3-b7 build personality, naming, voice, visual direction, guidelines, and messaging, and b8-b10 activate, monitor, and govern it. No code, ever. Two rails run through all ten, starting now.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A clear model of what AI can and cannot be trusted to do in brand work, the single most important brand insight of the AI age (AI regresses to the average, so distinctiveness must be engineered), a two-rail habit you will use every session, and your own one-page brand AI ground rules.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: WHAT AN LLM IS FOR BRAND ============ -->
+  <section class="section" id="what-llm-is">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers Brand Management with GenAI + 2026 brand-identity guides</span>
+      <h2>What an LLM actually is - for a brand builder <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A large language model predicts the most likely next words from a huge slice of the internet. For brand work that cuts two ways: it is a tireless engine for exploration, drafts, and pattern - and it pulls everything toward the average, which is the exact opposite of what a brand is for. A brand exists to be different; AI, left alone, makes you the same as everyone.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="What to trust an LLM with in brand work: strong at exploration, drafting, and pattern; risky at brand soul, judgment, and facts - and it regresses to the average, so distinctiveness must be engineered">
+        <style>
+          .b1cT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b1cI { font: 700 15px Inter, sans-serif; fill: #131A2A; }
+          .b1cX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b1cXi { font: 400 12.5px Inter, sans-serif; fill: #5C1508; }
+          .b1cN { font: 600 14px Inter, sans-serif; fill: #5C1508; }
+        </style>
+        <rect x="30" y="46" width="195" height="96" rx="12" fill="#1E3A6E"/>
+        <text class="b1cT" x="52" y="84">Explore at volume</text>
+        <text class="b1cX" x="52" y="106">names, angles, moods</text>
+        <text class="b1cX" x="52" y="124">to react to</text>
+        <rect x="240" y="46" width="195" height="96" rx="12" fill="#3E5C97"/>
+        <text class="b1cT" x="262" y="84">Draft to a system</text>
+        <text class="b1cX" x="262" y="106">on-brand copy once</text>
+        <text class="b1cX" x="262" y="124">the rules exist</text>
+        <rect x="450" y="46" width="195" height="96" rx="12" fill="#A9BCE0"/>
+        <text class="b1cI" x="472" y="84">Find + apply pattern</text>
+        <text class="b1cXi" x="472" y="106">audit, tag, restructure</text>
+        <text class="b1cXi" x="472" y="124">at scale</text>
+        <rect x="660" y="46" width="195" height="96" rx="12" fill="#FDECE8" stroke="#F0523F" stroke-width="1.5"/>
+        <text class="b1cI" x="682" y="84">Brand soul ✗</text>
+        <text class="b1cXi" x="682" y="106">meaning, judgment,</text>
+        <text class="b1cXi" x="682" y="124">facts - stay human</text>
+        <rect x="30" y="250" width="14" height="14" rx="3" fill="#F0523F"/>
+        <text class="b1cN" x="54" y="262">AI regresses to the average. Distinctiveness is engineered by your system, not the model.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the brand reliability map: three you can trust, one that stays human</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The sameness trap - the one brand risk unique to AI<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every other AI risk (fabrication, IP) shows up in marketing too. This one is brand's alone: because the model predicts the <em>most likely</em> phrasing, everyone who prompts it the same lazy way gets the same average answer. Ask ten founders for "a bold, innovative tagline" and you get ten variations of the same beige sentence. The result is category-wide homogenization - and a brand that blends in has failed at its only job.</p>
+        <ul>
+          <li><strong>The model pulls to the mean.</strong> Distinctive is, by definition, unlikely - so you have to steer hard toward it.</li>
+          <li><strong>A documented system is the steering.</strong> A locked positioning, a real personality, and voice rules with a "never say" list turn the average engine into a Cadence-shaped one.</li>
+          <li><strong>Without a system, AI is a dilution machine.</strong> With one, it is a scaling machine. Same tool, opposite outcome - which is the whole reason this course exists.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI) - feel the sameness</span>Write a bold, innovative tagline for a productivity app. Now do it 5 more times. Notice how similar and generic they all sound - that is the average talking, and it is what your competitors are shipping too.</div>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The category that started sounding like one company.</strong> When a wave of startups all reached for the same AI tools with the same thin prompts, their sites converged - same gradients, same "empower your team to do their best work", same everything. The brands that stood out were the ones with a documented system the AI had to obey. Distinctiveness did not come from the model. It came from what they fed it.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The can / cannot table - pin this to your monitor<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <thead><tr><th>Trust it to...</th><th>Never trust it to (keep human)</th></tr></thead>
+          <tbody>
+            <tr><td>Generate naming, tagline, and angle options to react to</td><td>Decide what the brand stands for</td></tr>
+            <tr><td>Draft on-brand copy once the system exists</td><td>Judge which option is actually distinctive</td></tr>
+            <tr><td>Explore visual moods and directions</td><td>Own the brand's meaning and story</td></tr>
+            <tr><td>Audit assets for consistency at scale</td><td>Produce facts, stats, or legal/IP clearance</td></tr>
+            <tr><td>Summarize competitor and audience research</td><td>Give final sign-off on anything public</td></tr>
+          </tbody>
+        </table>
+        <p>The left column is a build-along later in this track. The right column is why every session pairs AI's speed with your judgement - the brand soul never gets outsourced.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE TOOL LANDSCAPE ============ -->
+  <section class="section" id="tool-landscape">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the 2026 brand-AI tool surveys</span>
+      <h2>The brand AI tool landscape, 2026 <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">The right first question is not "which tool" but "is this safe for my brand and my data, and does it stay on-system?" Three layers, and the line between them is about control and IP, not raw quality.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three layers of brand AI tools: general assistants, brand-native tools and brand GPTs, and image tools for direction - separated by a control and IP line">
+        <style>
+          .b1sT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b1sI { font: 700 15px Inter, sans-serif; fill: #131A2A; }
+          .b1sX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b1sXi { font: 400 12.5px Inter, sans-serif; fill: #5B647A; }
+          .b1sN { font: 600 14px Inter, sans-serif; fill: #5C1508; }
+        </style>
+        <rect x="30" y="40" width="540" height="58" rx="12" fill="#A9BCE0"/>
+        <text class="b1sI" x="54" y="66">Image + direction tools</text>
+        <text class="b1sI" x="54" y="86" font-weight="400" font-size="12.5">Midjourney · DALL-E · Canva - moodboards + direction, not craft</text>
+        <rect x="30" y="120" width="540" height="58" rx="12" fill="#1E3A6E"/>
+        <text class="b1sT" x="54" y="146">Brand-native + brand GPTs</text>
+        <text class="b1sX" x="54" y="166">custom instructions trained on your system - Jasper brand voice, a Cadence GPT</text>
+        <rect x="30" y="200" width="540" height="58" rx="12" fill="#0F1E3D"/>
+        <text class="b1sT" x="54" y="226">General assistants</text>
+        <text class="b1sX" x="54" y="246">ChatGPT · Claude · Perplexity - research, naming, voice drafts, audits</text>
+        <rect x="610" y="120" width="240" height="138" rx="12" fill="#FDECE8" stroke="#F0523F" stroke-width="1.5"/>
+        <text class="b1sI" x="632" y="148">The control + IP line</text>
+        <text class="b1sXi" x="632" y="172">Unreleased brand work +</text>
+        <text class="b1sXi" x="632" y="190">assets for reuse -&gt; tools</text>
+        <text class="b1sXi" x="632" y="208">with rights + a brand GPT.</text>
+        <text class="b1sXi" x="632" y="232">Open exploration -&gt; any</text>
+        <text class="b1sXi" x="632" y="250">assistant is fine.</text>
+        <rect x="30" y="284" width="14" height="14" rx="3" fill="#F0523F"/>
+        <text class="b1sN" x="54" y="296">A brand GPT loaded with your system is what turns a generic assistant on-brand.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three tool layers, one line for control and IP</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>General assistants, brand GPTs, and image tools<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Each layer has a job in brand work:</p>
+        <ul>
+          <li><strong>General assistants</strong> (ChatGPT, Claude, Perplexity) - competitor and audience research, naming and voice exploration, consistency audits.</li>
+          <li><strong>Brand-native + brand GPTs</strong> - the big unlock: a custom GPT or tool loaded with your positioning, personality, and voice rules generates on-system every time. You build Cadence's in session b6.</li>
+          <li><strong>Image + direction tools</strong> (Midjourney, DALL-E, Canva) - moodboards and visual direction to align a team and brief a designer. Direction, not final production art.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>One-question test before you paste</strong>
+          "If this leaked, or if this asset had to survive a legal challenge, am I fine?" Yes - any tool. No - a controlled tool with clear rights, and a human review. That is rail two in one line.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The 2026 landscape at a glance<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Research + strategy:</strong> ChatGPT, Claude, Perplexity for competitor scans, audience sentiment, and category mapping.</li>
+          <li><strong>Voice + content at scale:</strong> brand GPTs and tools like Jasper that hold a documented voice so output stays on-brand.</li>
+          <li><strong>Visual direction:</strong> Midjourney, DALL-E, Canva for moodboards and exploration - with IP and likeness caution (session b5, b10).</li>
+          <li><strong>The 2026 shift:</strong> documented brand guidelines - especially verbal, with a "never say" list - are now a requirement, because they are what lets AI scale a brand without diluting it.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE TWO RAILS ============ -->
+  <section class="section" id="two-rails">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the habit every later session assumes</span>
+      <h2>The two rails: own the soul, protect the rights <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">Everything else in this course is technique. These two rails are non-negotiable, and they are what separate a brand that uses AI to get sharper from one that dissolves into the category average.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Rail 1 - humans own the brand soul and the claim<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>AI explores, drafts, and audits; humans decide what the brand means, judge what is truly distinctive, and give final sign-off. The strategy, the story, and the taste stay yours - and the antidote to AI sameness is a documented system that forces the model off the average and onto your brand.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The rebrand that outsourced the soul.</strong> A team let AI generate its entire positioning from a one-line prompt and shipped it. It was competent, fluent, and indistinguishable from three competitors who had done the same. They had automated the one part - meaning - that was supposed to be theirs. Rail one exists so the machine sharpens your judgement instead of replacing it.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Rail 2 - protect the rights (IP, likeness, data)<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>AI-generated names, logos, and images carry real legal exposure: trademark conflicts, copyright questions over training data, and right-of-publicity or likeness issues with real people. Clear anything before use, keep a human review, and mind the data you feed in.</p>
+        <ul>
+          <li><strong>Names and logos need clearance.</strong> An AI name may already be someone's trademark - always check before you commit.</li>
+          <li><strong>Images carry rights risk.</strong> Style-mimicry of a living artist, or a recognizable face, can be a legal problem. Check the tool's commercial-use terms.</li>
+          <li><strong>Disclosure where required.</strong> FTC/ASA rules on AI and endorsements apply to brand content too.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Say it out loud once</strong>
+          "AI explores and drafts; I own the meaning, the taste, and the rights." That sentence is the spine of the whole builder track.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Sameness vs distinct - see the average, then beat it <span class="tag demo">★ 12 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">The single most important habit in the course, in one experiment. Ask AI for brand language with a lazy prompt, then with a real brief, and watch generic average copy become something only Cadence could say.</p>
+
+    <div class="steps">
+      <div class="step"><p>Open any chat AI. Pick a safe subject - our sample product Cadence, or one you admire.</p></div>
+      <div class="step"><p><strong>Average ask:</strong> "give me a bold tagline and positioning" with no brief. Note how it could belong to any product in the category.</p></div>
+      <div class="step"><p><strong>Systematized ask:</strong> paste a short brief - the specific audience, the real point of difference, a personality word, and one thing the brand would never say - and ask again.</p></div>
+      <div class="step"><p>Compare. The second is sharper, stranger, more ownable - because you steered the model off the average. That delta is your brand system doing its job before it even exists on paper.</p></div>
+      <div class="step"><p>Now push it: add a "never say" rule (e.g. no "revolutionary", no "seamless") and re-run. Watch the beige words disappear. That is a voice guideline working, and you will build a real one in b4.</p></div>
+    </div>
+
+    <div class="prompt-box bad"><span class="label">Prompt A - average (generic, could be anyone)</span>Give me a bold, innovative tagline and positioning statement for a productivity app.</div>
+
+    <div class="prompt-box good"><span class="label">★ Prompt B - systematized (only Cadence could say it)</span>Brief - use ONLY this:
+Audience: consultants and team leads in back-to-back client calls.
+Point of difference: notes + decisions are drafted the moment the call ends, so they can be fully present.
+Personality: calm, capable, quietly on your side. Never say: "revolutionary", "seamless", "game-changer".
+
+Give me 5 taglines and a one-line positioning that only THIS brand could own.
+Avoid anything a generic productivity app could say.</div>
+
+    <div class="callout tip">
+      <strong>Why this is demo one</strong>
+      Every later session is a variation on "steer the model off the average with a documented system". Positioning (b2), personality (b3), and voice (b4) are you building the steering, piece by piece. Feel it once tonight.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Write your brand's AI ground rules <span class="tag demo">★ 10 min · build your own</span></h2>
+    </div>
+    <p class="lede">A reusable artifact you will keep: a short "how we use AI on the brand" card. You draft it with AI, then edit it - which is rail one in miniature.</p>
+
+    <div class="steps">
+      <div class="step"><p>Give the AI the two rails and your context: brand, the tools you have (or have not) approved, and what is confidential (unreleased identity work, brand assets).</p></div>
+      <div class="step"><p>Ask for a one-page card with three lists: <em>Green light</em> (safe uses - research, exploration, drafting to the system), <em>Red light</em> (never: outsourcing the strategy, shipping AI names/logos without clearance), and <em>Always</em> (steer off the average with the system, human sign-off, check IP + disclosure).</p></div>
+      <div class="step"><p>Edit it hard. Add your real tools and who signs off. The AI draft is 70%; your judgement is the 30% that matters.</p></div>
+      <div class="step"><p>Keep it. You will refine it in the leader session a3 (integrity + IP) and the builder finale b10 (governance).</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The ground-rules prompt</span>Draft a one-page "brand AI ground rules" card for our team.
+Context: we do brand strategy, identity, voice, and content; unreleased identity work is
+confidential; approved tools are [list, or "none yet"].
+
+Build it around two rails:
+1) Humans own the brand soul + the claim: AI explores and drafts, we decide meaning, judge
+   distinctiveness, and sign off. Steer off the average with our documented system.
+2) Protect the rights: clear AI names/logos before use, mind likeness + copyright, disclose
+   AI where required.
+
+Format: three short lists - Green light (safe uses), Red light (never), Always (steer with
+the system, human sign-off, check IP + disclosure). Plain language, fits on one page.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The card that kept a brand a brand.</strong> A team adopted AI fast and their output quietly drifted toward the category average within a quarter. A one-page rule - "every AI asset must be steered by our system and pass a human distinctiveness check" - pulled it back. Speed stayed; sameness left. That is the entire promise of this course in one habit.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish both demos if you did not complete them live - especially sameness-vs-distinct. Feeling the average yourself beats being told about it.</li>
+      <li>Run the average prompt on your own brand or category. Screenshot the beige result - that is your reminder of what everyone without a system is shipping.</li>
+      <li>Finalise your one-page brand AI ground rules and share it with a colleague.</li>
+      <li>Jot the one thing your brand should NEVER say. You will use it in b4 to build a real voice guideline.</li>
+      <li>Optional: skim your current brand guidelines (or note that you need some). Bring one gap to session b2.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public brand-AI curricula, brand-strategy canon, and vendor documentation. Certificates and paid tooling stay official. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Brand Management with Generative AI (course)</span><span class="note">Part 1-2 · what AI does for brand voice, identity, positioning</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Brand Identity Guide 2026 (Clay / Webmark)</span><span class="note">Part 1 · strategy vs identity; the sameness trap</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Establishing AI Brand Guidelines (Cloud Campaign)</span><span class="note">Part 2 · brand GPTs; full depth in b6</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Trademark / likeness / FTC disclosure canon</span><span class="note">Part 3 · rail two, sourced in the course map</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What is the brand risk unique to AI that this course is built around?</p>
+      <button class="qopt" type="button">A · It is too slow to be useful</button>
+      <button class="qopt" type="button">B · It regresses to the average, making brands homogenized and generic</button>
+      <button class="qopt" type="button">C · It cannot write in English</button>
+      <p class="qwhy">The model predicts the most likely phrasing, so lazy prompting yields the category average. A brand exists to be different - so distinctiveness must be engineered with a system.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · What actually turns a generic AI assistant into an on-brand one?</p>
+      <button class="qopt" type="button">A · A longer prompt</button>
+      <button class="qopt" type="button">B · A newer, bigger model</button>
+      <button class="qopt" type="button">C · A documented brand system - positioning, personality, voice rules - it must obey</button>
+      <p class="qwhy">The system is the steering. Without it AI dilutes; with it, AI scales the brand. Same tool, opposite outcome.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Which part of brand work must stay human?</p>
+      <button class="qopt" type="button">A · Deciding what the brand means, judging distinctiveness, and final sign-off</button>
+      <button class="qopt" type="button">B · All of it - AI should own the brand</button>
+      <button class="qopt" type="button">C · None - automate everything</button>
+      <p class="qwhy">Rail one: AI explores and drafts; humans own the soul, the taste, and the claim. Outsource the meaning and you become the average.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Builder session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>An LLM is</b><span>a next-word predictor that pulls to the average - the opposite of what a brand is for.</span></div>
+      <div class="cheat-item"><b>The sameness trap</b><span>lazy prompting yields the category average. A brand that blends in has failed its only job.</span></div>
+      <div class="cheat-item"><b>The antidote</b><span>a documented system (positioning + personality + voice + never-say) steers AI off the average onto your brand.</span></div>
+      <div class="cheat-item"><b>Dilution vs scaling</b><span>without a system AI dilutes the brand; with one it scales it. Same tool, opposite outcome.</span></div>
+      <div class="cheat-item"><b>Trust it to</b><span>explore names/angles/moods, draft to the system, find + apply pattern, audit, summarize research.</span></div>
+      <div class="cheat-item"><b>Keep human</b><span>brand meaning, distinctiveness judgement, story, facts/IP clearance, final sign-off.</span></div>
+      <div class="cheat-item"><b>Rail 1 + Rail 2</b><span>humans own the soul + the claim; protect the rights (trademark, likeness, copyright, disclosure).</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b2 - positioning &amp; brand strategy: build the steering, starting with what Cadence stands for.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Builder session 1 of 10 · learn-ai-branding-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b2-positioning-strategy.html">Next: Positioning &amp; brand strategy →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>
